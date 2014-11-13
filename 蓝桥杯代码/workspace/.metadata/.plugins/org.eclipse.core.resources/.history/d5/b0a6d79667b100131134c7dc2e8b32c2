@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	static int[] num = new int[20];
+	static int[] vis = new int[20];
+	int dfs(int i){
+		
+	}
+	public static void main(String[] args){
+		System.out.println("s");
+		num[1] = 1;num[2] = 8;num[12] = 3;
+		vis[1] = 1;vis[8] = 1;vis[3] = 1;
+		dfs(3);
+		
+		for (int i3 = 2; i3 <= 12; i3 ++){
+			if (notuse(i3)){
+				vis[i3] = 1;
+				for (int i4 = 2; i4 <= 12; i4 ++){
+					if (notuse(i4)){
+						vis[i4] = 1;
+						for (int i5 = 2; i5 <= 12; i5 ++){
+							if (notuse(i5)){
+								vis[i3] = 1;
+								
+								vis[i3] = 0;
+							}//end i3 if
+						}//end i3
+						vis[i4] = 0;
+					}//end i4 if
+				}//end i4
+				vis[i3] = 0;
+			}//end i3 if
+		}//end i3
+	}//end main
+}//end Main

@@ -1,0 +1,20 @@
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	static int[][] dp;
+	public static void main(String[] args){
+		
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int s = in.nextInt();
+		int a = in.nextInt();
+		int b = in.nextInt();
+		int min = 0 - a * n;
+		int max = 0 + b * n;
+		dp = new int[(a+b) * n + 10][n + 10];
+		dfs(min)
+		System.out.println(si + " " + sj);
+	}//end main
+}//end Main

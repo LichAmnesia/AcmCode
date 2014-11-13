@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	static int[] num = new int[20];
+	static int[] vis = new int[20];
+	static boolean dfs(int st){
+		if (st == 12){
+			return check(num);
+		}
+		for (int i = 2; i <= 12; i ++){
+			if (notuse(i)){
+				vis[i] = 1;
+				if (dfs(i + 1)) return true;
+				else {
+					vis[i] = 0;
+					return false;
+				}
+			}//end if
+		}//end for
+	}
+	public static void main(String[] args){
+		System.out.println("s");
+		num[1] = 1;num[2] = 8;num[12] = 3;
+		vis[1] = 1;vis[8] = 1;vis[3] = 1;
+		dfs(3);
+	}//end main
+}//end Main

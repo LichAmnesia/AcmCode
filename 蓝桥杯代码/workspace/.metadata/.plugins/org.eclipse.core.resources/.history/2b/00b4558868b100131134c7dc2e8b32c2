@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	static int[] num = new int[20];
+	static int[] vis = new int[20];
+	static boolean dfs(int st){
+		if (st == 12){
+			return check(num);
+		}
+		for (int i = 2; i <= 12; i ++){
+			if (vis[i] == 0){
+				vis[i] = 1;
+				num[st] = i;
+				if (dfs(st + 1)) return true;
+				else {
+					vis[i] = 0;
+					num[st] = 0;
+					return false;
+				}
+			}//end if
+		}//end for
+	}
+	static boolean check(int[] num){
+		int a = num[1] + num[3] + num[6] + num[8];
+		int a = num[1] + num[3] + num[6] + num[8];
+		int a = num[1] + num[3] + num[6] + num[8];
+	}
+	public static void main(String[] args){
+		System.out.println("s");
+		num[1] = 1;num[2] = 8;num[12] = 3;
+		vis[1] = 1;vis[8] = 1;vis[3] = 1;
+		dfs(3);
+	}//end main
+}//end Main

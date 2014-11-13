@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args){
+		System.out.println("s");
+		for (int i = 0; i <= 9; i ++){
+			for (int j = 0; j <= 9; j ++){
+				if (i == j) continue;
+				for (int k = 0; k <= 9; k++){
+					if (j == k) continue;
+					for (int n = 0; n <= 9; n ++){
+						if (k == n) continue;
+						int[] num = new int[10];
+						num[i] = 1;num[j] = 1;num[k] = 1;num[n] = 1;
+						int tmp = i * 1000 + j * 100 + k * 10
+					}
+				}
+			}//end j
+		}//end i
+	}
+}

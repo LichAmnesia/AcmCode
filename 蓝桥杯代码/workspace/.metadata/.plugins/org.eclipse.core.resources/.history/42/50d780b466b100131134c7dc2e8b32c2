@@ -1,0 +1,33 @@
+201 * 6 = 1206
+210 * 6 = 1260
+351 * 9 = 3159
+473 * 8 = 3784
+501 * 3 = 1503
+21 * 60 = 1260
+21 * 87 = 1827
+27 * 81 = 2187
+30 * 51 = 1530
+
+35 * 41 = 1435
+
+510 * 3 = 1530
+51 * 30 = 1530
+60 * 21 = 1260
+81 * 27 = 2187
+87 * 21 = 1827
+
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args){
+		System.out.println("s");
+		for (int i = 1; i <= 20; i ++)
+			for (int j = 1; j <= 20; j ++){
+				if (i * j == 6 * (j + i)){
+					System.out.println(i + " " + j);
+				}
+			}
+	}
+}

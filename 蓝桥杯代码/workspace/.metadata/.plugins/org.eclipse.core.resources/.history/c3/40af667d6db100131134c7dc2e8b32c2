@@ -1,0 +1,36 @@
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	static int[][] map;
+	public static void main(String[] args){
+		System.out.println("s");
+		Scanner in = new Scanner(System.in);
+		int m = in.nextInt();
+		int n = in.nextInt();
+		map = new int[m + 10][n + 10];
+		for (int i = 0; i < m; i ++){
+			map[i] = new int[n + 2];
+			for (int j = 0; j < n; j ++){
+				map[i][j] = in.nextInt();
+			}
+		}
+		int si = in.nextInt();
+		int sj = in.nextInt();
+		String str = in.next();
+		char c = str.toCharArray()[0];
+		int dir = 0;
+		switch(c){
+		case 'U': dir = 0;break;
+		case 'D': dir = 1;break;
+		case 'L': dir = 2;break;
+		case 'R': dir = 3;break;
+		}
+		System.out.println(c + " " + dir);
+		int k = in.nextInt();
+		
+		
+		
+	}//end main
+}//end Main

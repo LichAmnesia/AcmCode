@@ -1,0 +1,11 @@
+
+public class Main {
+	private static int n = 1;
+	
+	public static void main(String[] args)
+	{
+		String filename = "t" + n + ".log";
+		n = ____________;
+		System.out.println("write to file: " + filename + " " );
+	}
+}

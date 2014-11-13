@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args){
+		System.out.println("s");
+		int a,b,c;
+		for (int i = 0; i <= 9; i ++){
+			for (int j = 0; j <= 9; j ++){
+				if (i == j) continue;
+				for (int k = 0; k <= 9; k++){
+					if (j == k || i == k) continue;
+					for (int n = 0; n <= 9; n ++){
+						if (k == n || j == n || i == n) continue;
+						int[] num = new int[10];
+						num[i] = 1;num[j] = 1;num[k] = 1;num[n] = 1;
+						//3 * 1 = 4
+						a = i * 100 + j * 10 + k * 1;
+						b = n;
+						c = a * b;
+						if (num[c % 10] == 1 && num[c / 10 % 10] == 1
+								&& num[c / 100 % 10] == 1 && num[c / 1000 % 10] == 1){
+							System.out.println(a + " * " + b + " = " + c);
+						}
+						a = i * 10 + j * 1;
+						b = k * 10 + n;
+						c = a * b;
+						if (num[c % 10] == 1 && num[c / 10 % 10] == 1
+								&& num[c / 100 % 10] == 1 && num[c / 1000 % 10] == 1){
+							System.out.println(a + " * " + b + " = " + c);
+						}
+					}
+				}
+			}//end j
+		}//end i
+	}
+	boolean check(int a,int b,int c,int d){
+		if (a == b )
+		
+	}
+}

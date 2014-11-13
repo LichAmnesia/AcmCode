@@ -1,0 +1,17 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	static int[] num = new int[20];
+	static int[] vis = new int[20];
+	public static void main(String[] args){
+		System.out.println("s");
+		num[1] = 1;num[2] = 8;num[12] = 3;
+		vis[1] = 1;vis[8] = 1;vis[3] = 1;
+		for (int i3 = 2; i3 <= 12; i3 ++){
+			if (notuse(i3)){
+				vis[i3] = 1;
+			}
+		}//end i3
+	}//end main
+}//end Main
