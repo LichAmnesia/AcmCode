@@ -1,29 +1,42 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-char s[1111111];
+string s;
+string ss[100000];
 int main(int argc, char const *argv[])
 {
 	int n = 5000;
-	scanf("%s", s);
+	cin >> s;
 	int id = 1;
 	long long ans = 0;
-	for (int i = 0; i < strlen(s); i ++){
+	int snum = 0;
+	for (int i = 0; i < s.size(); i ++){
 		if (s[i] == '\"'){
-			int sum = 0;
 			i ++;
+			int st = i;
+			int len = 0;
 			while (s[i] != '\"'){
-				//cout << s[i];
-				sum += s[i] - 'A';
+				len ++;
 				i ++;
 			}
-			//cout << endl;
-			if (id == 939){
-				cout << sum << endl;
-			}
-			ans += id * sum;
-			id ++;
+			int ed = i - 1;
+			ss[snum ++] = s.substr(st,len);
+			//cout << st << ' ' << ed << ' ' << ss[snum - 1] << endl;
+			
 		}
+	}
+
+	sort(ss, ss + snum);
+	for (int i = 0; i < snum; i ++){
+		//if (i == 937) cout << ss[i] << endl;
+		int sum = 0;
+		for (int j = 0; j < ss[i].size(); j ++){
+			sum += ss[i][j] - 'A' + 1;
+		}
+		// if (i == 937){
+		// 	cout << i << ' ' << sum << ' ' << (i + 1) * sum << endl;
+		// }
+		ans += (i + 1) * sum;
 	}
 	cout << ans << endl;
 	return 0;
